@@ -160,6 +160,37 @@
 
   .footer { text-align: center; padding: 36px 20px; color: #444; font-size: 0.78rem; border-top: 1px solid #1a1a1a; }
 
+  /* EASTER EGG */
+  #easter-egg {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a0a14 100%);
+    border: 1px solid #e94560;
+    border-radius: 16px;
+    padding: 22px 28px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 0 40px rgba(233,69,96,0.35), 0 8px 32px rgba(0,0,0,0.6);
+    max-width: 340px;
+    width: calc(100% - 40px);
+    animation: eggPop 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  @keyframes eggPop {
+    from { opacity: 0; transform: translateX(-50%) translateY(24px) scale(0.92); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  }
+  #easter-egg .egg-badge { font-size: 2.2rem; margin-bottom: 8px; }
+  #easter-egg .egg-title { font-size: 1.05rem; font-weight: 700; color: #e94560; margin-bottom: 10px; letter-spacing: 0.3px; }
+  #easter-egg .egg-msg { font-size: 0.82rem; color: #bbb; line-height: 1.6; }
+  #easter-egg .egg-secret { margin-top: 12px; background: rgba(233,69,96,0.08); border-radius: 8px; padding: 10px 12px; font-size: 0.8rem; color: #ddd; }
+  #easter-egg .egg-close { display: inline-block; margin-top: 16px; font-size: 0.72rem; color: #555; cursor: pointer; letter-spacing: 0.5px; text-transform: uppercase; }
+  #easter-egg .egg-close:hover { color: #e94560; }
+  .spec-card.clickable { cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s; }
+  .spec-card.clickable:active { transform: scale(0.97); }
+
   @media (max-width: 580px) {
     .myth-vs { grid-template-columns: 1fr; }
     .vs-badge { text-align: center; }
@@ -912,7 +943,7 @@
       <div><div class="section-title">Dane techniczne — Hyundai i40 1.7 CRDi D4FD 2015</div></div>
     </div>
     <div class="spec-grid">
-      <div class="spec-card"><div class="spec-label">Silnik</div><div class="spec-val">D4FD 1.7 CRDi</div><div class="spec-note">Turbodiesel, VGT</div></div>
+      <div class="spec-card clickable" onclick="d4fdClick(this)"><div class="spec-label">Silnik</div><div class="spec-val">D4FD 1.7 CRDi</div><div class="spec-note">Turbodiesel, VGT</div></div>
       <div class="spec-card"><div class="spec-label">Moc</div><div class="spec-val">141 KM / 104 kW</div><div class="spec-note">Wersja po liftingu</div></div>
       <div class="spec-card"><div class="spec-label">Olej silnikowy</div><div class="spec-val">5W-30 ACEA C3</div><div class="spec-note">Pojemność: 5,3L z filtrem</div></div>
       <div class="spec-card"><div class="spec-label">Płyn chłodniczy</div><div class="spec-val">7,2L</div><div class="spec-note">Ochrona do -35°C</div></div>
@@ -947,6 +978,18 @@ None    </div>
   <p>Hyundai i40 1.7 CRDi D4FD — diesel docenia tych, którzy go szanują. 🔧</p>
 </div>
 
+<div id="easter-egg">
+  <div class="egg-badge">🏆</div>
+  <div class="egg-title">Prawdziwy znawca D4FD!</div>
+  <div class="egg-msg">Kliknąłeś 5 razy w silnik — zasługujesz na sekret:</div>
+  <div class="egg-secret">
+    D4FD przy wzorowej obsłudze potrafi przejechać<br>
+    <strong style="color:#e94560;font-size:1rem;">400 000+ km</strong><br>
+    <span style="font-size:0.75rem;color:#888;">Olej ACEA C3, łańcuch w terminie, bieg jałowy na zimno.<br>Nic więcej nie potrzeba.</span>
+  </div>
+  <div class="egg-close" onclick="document.getElementById('easter-egg').style.display='none'">[ zamknij ]</div>
+</div>
+
 <script>
 function showTab(id) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
@@ -956,6 +999,22 @@ function showTab(id) {
 }
 function toggleIssue(el) {
   el.classList.toggle('open');
+}
+let d4fdClicks = 0;
+const d4fdHints = ['', '4×', '3×', '2×', '1×'];
+function d4fdClick(el) {
+  d4fdClicks++;
+  if (d4fdClicks < 5) {
+    el.querySelector('.spec-note').textContent = 'Jeszcze ' + d4fdHints[d4fdClicks] + '…';
+  } else {
+    el.querySelector('.spec-note').textContent = 'Turbodiesel, VGT';
+    d4fdClicks = 0;
+    const egg = document.getElementById('easter-egg');
+    egg.style.display = 'block';
+    egg.style.animation = 'none';
+    egg.offsetHeight;
+    egg.style.animation = '';
+  }
 }
 </script>
 </body>
