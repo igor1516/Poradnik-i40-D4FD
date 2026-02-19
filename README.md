@@ -1,34 +1,12 @@
-# Poradnik i40 D4FD
+# Poradnik i40 D4FD manual
 
 Poradnik właściciela Hyundai i40 1.7 CRDi (silnik D4FD) — zimny rozruch, zasady eksploatacji, serwis, typowe usterki, części i dane techniczne.
 
 ## Jak wyświetlić graficznie (w przeglądarce)
 
-### Opcja 1 — htmlpreview.github.io (działa od razu, bez konfiguracji)
-
 Kliknij poniższy link — plik `index.html` zostanie wyrenderowany bezpośrednio w przeglądarce:
 
-**[Otwórz Poradnik (htmlpreview)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igor1516/Poradnik-i40-D4FD/main/index.html)**
-
-### Opcja 2 — GitHub Pages (własny adres `*.github.io`)
-
-1. Wejdź w repozytorium na GitHub → **Settings** → **Pages**
-2. W sekcji **Source** wybierz: **Branch: `main`**, folder: **`/ (root)`**
-3. Kliknij **Save**
-
-Po chwili strona będzie dostępna pod adresem:
-
-```
-https://igor1516.github.io/Poradnik-i40-D4FD/
-```
-
-Plik `.nojekyll` w repozytorium zapewnia poprawne renderowanie przez GitHub Pages bez zbędnego przetwarzania przez Jekyll.
-
-### Opcja 3 — lokalnie
-
-Pobierz plik `index.html` i otwórz go dowolną przeglądarką (dwuklik lub przeciągnij na okno przeglądarki).
-
----
+**[Otwórz Poradnik](https://htmlpreview.github.io/?https://raw.githubusercontent.com/igor1516/Poradnik-i40-D4FD/main/index.html)**
 
 ## Zawartość poradnika
 
