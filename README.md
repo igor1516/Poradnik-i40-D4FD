@@ -1,0 +1,1 @@
+# Poradnik-i40-D4FD
