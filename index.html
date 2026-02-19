@@ -203,8 +203,8 @@
       <div class="step">
         <div class="step-num blue">1</div>
         <div class="step-content">
-          <h4>Włącz zapłon — i poczekaj na kontrolkę</h4>
-          <p>Po przekręceniu kluczyka w pozycję „zapłon" zapal się kontrolka świec żarowych (ikona spirali). <strong>Poczekaj aż zgaśnie</strong> — to sygnał, że świece nagrzały komorę spalania. Przy silnych mrozach możesz powtórzyć cykl 2 razy.</p>
+          <h4>Świece nagrzewają się automatycznie — kręć od razu</h4>
+          <p>D4FD nagrzewa świece żarowe automatycznie — bez konieczności zatrzymywania kluczyka na pozycji „zapłon" i czekania na zgaśnięcie kontrolki. Kluczyk przekręcasz od razu do rozruchu. Kontrolka świec może błysnąć, ale <strong>nie musisz na nią czekać</strong>.</p>
         </div>
       </div>
       <div class="step">
@@ -242,8 +242,8 @@
       </thead>
       <tbody>
         <tr><td><span class="temp-badge" style="background:rgba(76,175,80,0.15);color:#4caf50">+5°C i wyżej</span></td><td>Łatwy</td><td>Normalnie — 1 min biegu jałowego wystarczy</td></tr>
-        <tr><td><span class="temp-badge" style="background:rgba(245,166,35,0.15);color:#f5a623">0°C do -10°C</span></td><td>Trudniejszy</td><td>Czekaj na kontrolkę świec, 2–3 min biegu jałowego, pierwsze km spokojnie</td></tr>
-        <tr><td><span class="temp-badge" style="background:rgba(233,69,96,0.15);color:#e94560">-10°C do -20°C</span></td><td>Ciężki</td><td>Podwójna procedura świec, 5 min biegu jałowego, sprawdź olej zimowy 0W-30</td></tr>
+        <tr><td><span class="temp-badge" style="background:rgba(245,166,35,0.15);color:#f5a623">0°C do -10°C</span></td><td>Trudniejszy</td><td>Świece nagrzewają się automatycznie — kręć od razu, 2–3 min biegu jałowego, pierwsze km spokojnie</td></tr>
+        <tr><td><span class="temp-badge" style="background:rgba(233,69,96,0.15);color:#e94560">-10°C do -20°C</span></td><td>Ciężki</td><td>Świece automatyczne — kręć od razu, 5 min biegu jałowego, sprawdź olej zimowy 0W-30</td></tr>
         <tr><td><span class="temp-badge" style="background:#2a0a0a;color:#ff4444">Poniżej -20°C</span></td><td>Krytyczny</td><td>Rozważ podgrzewacz postojowy, akumulator w pełni naładowany obowiązkowo</td></tr>
       </tbody>
     </table>
@@ -444,11 +444,11 @@
     <div class="issue-block" onclick="toggleIssue(this)">
       <div class="issue-header">
         <div class="issue-severity sev-critical"></div>
-        <div class="issue-title">💧 Woda w bagażniku — zwarcie modułu, utrata świateł</div>
+        <div class="issue-title">💧 Woda w bagażniku — zwarcie wiązki, utrata świateł</div>
         <div class="issue-arrow">▼</div>
       </div>
       <div class="issue-body">
-        <p>Typowa bolączka i40 — woda dostaje się przez nieszczelną listwę tylną (lamp tylnych) i spływa do modułu sterującego. Skutek: zwarcie, które odłącza lewą stronę świateł pozycyjnych.</p>
+        <p>Typowa bolączka i40 — woda dostaje się przez nieszczelną listwę tylną (lamp tylnych) i powoduje zwarcie do masy w wiązce elektrycznej bagażnika. BCM wykrywa zwarcie i odłącza zasilanie obwodu — stąd utrata lewej strony świateł pozycyjnych. Sam moduł BCM nie jest uszkodzony, tylko reaguje na zwarcie zgodnie z działaniem zabezpieczenia.</p>
         <div class="issue-row">
           <div class="issue-col">
             <div class="col-title">🔴 Jak rozpoznać</div>
@@ -465,14 +465,13 @@
               <li>Zdjąć wykładzinę bagażnika</li>
               <li>Test: polać listwę wodą, obserwować</li>
               <li>Uszczelnienie listwy (nowa uszczelka lub silikon)</li>
-              <li>Osuszyć i sprawdzić moduł</li>
-              <li>Moduł BCM: 500–1500 zł jeśli uszkodzony</li>
+              <li>Osuszyć wiązkę i złącza w bagażniku</li>
+              <li>Po osuszeniu i uszczelnieniu — światła wracają same</li>
             </ul>
           </div>
         </div>
-        <p style="margin-top:12px"><strong>Profilaktyka:</strong> Regularnie sprawdzaj wilgoć w bagażniku po deszczu lub myjni. Woda + elektronika = drogie konsekwencje. Działaj przy pierwszych śladach.</p>
-        <span class="cost-badge cost-low">Uszczelnienie: 50–150 zł</span>
-        <span class="cost-badge cost-high" style="margin-left:6px">Moduł BCM: 500–1500 zł</span>
+        <p style="margin-top:12px"><strong>Profilaktyka:</strong> Regularnie sprawdzaj wilgoć w bagażniku po deszczu lub myjni. Woda w wiązce = zwarcie = odcięte światła. Uszczelnienie listwy to kilkadziesiąt złotych i eliminuje problem całkowicie.</p>
+        <span class="cost-badge cost-low">Uszczelnienie listwy: 50–150 zł</span>
       </div>
     </div>
 
